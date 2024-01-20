@@ -1,5 +1,6 @@
 # hospital_app/forms.py
 from django import forms
+from .models import Patient
 
 class PatientForm(forms.Form):
     id = forms.CharField(max_length=3)
@@ -9,3 +10,8 @@ class PatientForm(forms.Form):
     emailAdress = forms.EmailField()
     history = forms.CharField()
     doctor = forms.CharField()
+
+class PatientForm(forms.ModelForm):
+    class Meta:
+        model = Patient
+        fields = '__all__'  # Use all fields from the model

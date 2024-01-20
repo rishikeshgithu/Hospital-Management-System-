@@ -10,7 +10,15 @@
 
 <body>
     <h2>Login</h2>
-    <!-- Add login form here -->
+    <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        <!-- Add login form fields here -->
+        <button type="submit">Login</button>
+    </form>
+
+    <p><a href="{% url 'home' %}">Home</a></p>
+    <p><a href="{% url 'validate_patient' %}">Patients</a></p>
+    <p><a href="{% url 'registration' %}">Patient Portal</a></p>
 </body>
 
 </html>
