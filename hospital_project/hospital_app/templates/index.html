@@ -89,13 +89,15 @@
     </header>
 
     <nav>
-        <a href="#">Home</a>
         <a href="#">About Us</a>
         <a href="#">Services</a>
         <a href="#">Doctors</a>
-        <a href="#">Patients</a>
         <a href="#">Appointments</a>
         <a href="#">Contact</a>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'validate_patient' %}">Patients</a>
+        <a href="{% url 'registration' %}">Patient Portal</a>
+        <a href="{% url 'login' %}">Login</a>
     </nav>
 
     <section class="banner">

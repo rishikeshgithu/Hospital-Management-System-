@@ -1,0 +1,23 @@
+<!-- hospital_app/templates/validate_patient.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate Patient Form</title>
+</head>
+
+<body>
+    <h2>Validate Patient Form</h2>
+    <form method="post" action="{% url 'validate_patient' %}">
+        {% csrf_token %} {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+
+    <p><a href="{% url 'home' %}">Home</a></p>
+    <p><a href="{% url 'registration' %}">Patient Portal</a></p>
+    <p><a href="{% url 'login' %}">Login</a></p>
+</body>
+
+</html>
