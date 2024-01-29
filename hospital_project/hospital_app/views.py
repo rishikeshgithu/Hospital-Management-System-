@@ -29,16 +29,18 @@ def validate_patient(request):
 
 def registration(request):
     if request.method == 'POST':
-        form = CustomUserCreationForm(request.POST)
+        form = PatientForm(request.POST)
         if form.is_valid():
-            user = form.save()
-            login(request, user)
-            return redirect('home')  # Redirect to the home page
+            form.save()
+            return redirect('home')
     else:
-        form = CustomUserCreationForm()
+        form = PatientForm()
 
     return render(request, 'registration.html', {'form': form})
 
 def login(request):
     # Add login logic here
     return render(request, 'login.html')
+
+def contact(request):
+    return render(request, 'contact.html')

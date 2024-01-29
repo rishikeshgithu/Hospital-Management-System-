@@ -5,19 +5,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration</title>
+    <title>Registration Form</title>
 </head>
 
 <body>
-    <h2>Registration</h2>
+    <h2>Registration Form</h2>
     <form method="post" action="{% url 'registration' %}">
-        {% csrf_token %}
-        <!-- Add registration form fields here -->
+        {% csrf_token %} {{ form.as_p }}
         <button type="submit">Register</button>
     </form>
 
     <p><a href="{% url 'home' %}">Home</a></p>
-    <p><a href="{% url 'validate_patient' %}">Patients</a></p>
+    <p><a href="{% url 'validate_patient' %}">Validate Patient</a></p>
     <p><a href="{% url 'login' %}">Login</a></p>
 </body>
 
