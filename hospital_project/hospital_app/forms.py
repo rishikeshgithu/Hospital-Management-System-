@@ -15,3 +15,8 @@ class PatientForm(forms.ModelForm):
     class Meta:
         model = Patient
         fields = '__all__'  # Use all fields from the model
+
+class RegistrationForm(PatientForm):
+        class Meta:
+             model = Patient
+             fields = '__all__'  # Use all fields from the model

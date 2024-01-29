@@ -44,3 +44,12 @@ def login(request):
 
 def contact(request):
     return render(request, 'contact.html')
+
+def appointments(request):
+    return render(request, 'appointments.html')
+def doctors(request):
+    return render(request, 'doctors.html')
+def services(request):
+    return render(request, 'services.html')
+def about_us(request):
+    return render(request, 'about_us.html')
